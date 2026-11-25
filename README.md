@@ -6,18 +6,22 @@ Página romántica hecha con HTML, CSS y JavaScript puro (sin instalar nada).
 
 ```
 index.html        Página principal
-css/styles.css    Estilos y animaciones
-js/config.js      Datos: nombre, fechas, Supabase y ntfy
+css/styles.css    Estilos base y animaciones
+css/v2.css        Fechas, animalitos y juego
+css/v3.css        Recuerdos (videos y carruseles)
+css/v4.css        Contador de tiempo juntos
+js/config.js      Datos: nombre, fechas, Supabase, ntfy y lista de recuerdos (MEDIA)
 js/corazon.js     Corazón 3D de partículas (gira, late, suena)
-js/videos.js      Videos de Instagram (uno a la vez, orden aleatorio)
+js/videos.js      Recuerdos: videos y carruseles con su canción (3 al azar)
 js/voz.js         Nota de voz tipo WhatsApp (audio/25.m4a)
-js/juego.js       Minijuego "Atrapa mis corazones"
-js/mascotas.js    Perritos y gatitos animados
+js/juego.js       Juego "Corazón volador" (estilo Flappy)
+js/mascotas.js    Animalitos con sonido al tocarlos
 js/extrano.js     Botón "Te extraño" (texto + foto → Supabase y ntfy)
-js/sonidos.js     Campanita y sonidos suaves
-js/main.js        Fechas, contadores y avisos
+js/sonidos.js     Sonidos: campanita relajada, juego y animalitos
+js/main.js        Contador de tiempo, fechas y avisos
+videos/           Carpetas 1 a 17: videos (.mp4) o carruseles (.jpg) + canción a1.mp3
 supabase.sql      Crea la base de datos (tabla + fotos)
-audio/25.m4a      Audio del mensaje
+sw.js, manifest.webmanifest, icons/   Para instalarla como app en el celular
 ```
 
 ## 1. Crear la base de datos (Supabase)
