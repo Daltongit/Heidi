@@ -1,0 +1,153 @@
+/* =====================================================================
+   VERSIÓN 3 · recuerdos propios (videos y carruseles con su canción)
+   ===================================================================== */
+
+.feed-item {
+  background: #1b0a13;
+  isolation: isolate;
+}
+
+.feed-item.es-fotos,
+.feed-item.es-video {
+  background: linear-gradient(150deg, hsl(var(--h) 88% 74%), hsl(var(--h2) 78% 56%));
+}
+
+/* Fondo borroso con el mismo contenido: llena la tarjeta sin cortar */
+.media-capa {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.media-fondo {
+  position: absolute;
+  inset: -12%;
+  width: 124%;
+  height: 124%;
+  object-fit: cover;
+  filter: blur(26px) saturate(1.25) brightness(0.8);
+  transform: scale(1.05);
+}
+
+.media-main {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.media-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.feed-item .slides {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.feed-item .slide {
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Sombra suave abajo para que los botones se lean */
+.feed-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.feed-item .slide-puntos {
+  top: auto;
+  bottom: 16px;
+  z-index: 3;
+}
+
+.feed-item .slide-puntos i {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.feed-item .slide-puntos i.on {
+  background: #fff;
+}
+
+/* Indicador de música (barras) */
+.nota-musical {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.nota-musical i {
+  display: block;
+  width: 3px;
+  height: 6px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.feed-item.reproduciendo .nota-musical i {
+  animation: barra 0.9s ease-in-out infinite;
+}
+
+.feed-item.reproduciendo .nota-musical i:nth-child(2) { animation-delay: 0.2s; }
+.feed-item.reproduciendo .nota-musical i:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes barra {
+  0%, 100% { height: 5px; }
+  50%      { height: 16px; }
+}
+
+.feed-pausa {
+  z-index: 5;
+}
+
+.feed-pausa .icon {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 4px;
+}
+
+/* Computadora: tarjetas en fila tipo Instagram */
+@media (min-width: 760px) {
+  .feed-item {
+    border-radius: 26px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+  }
+
+  .feed-item:hover {
+    transform: translateY(-4px);
+  }
+
+  .feed-pausa .icon {
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+  }
+}

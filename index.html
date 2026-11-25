@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Una página hecha con cariño para ti">
+  <meta name="theme-color" content="#e75480">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="❤️">
+  <title>Feliz cumpleaños, Heidi ❤️</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/v2.css">
+  <link rel="stylesheet" href="css/v3.css">
+  <link rel="stylesheet" href="css/v4.css">
+</head>
+<body>
+
+  <!-- Iconos (sprite SVG reutilizable) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.6s-7.6-4.6-9.7-9.3C.9 7.9 2.9 4.4 6.6 4.4c2.2 0 3.7 1.2 4.6 2.6h1.6c.9-1.4 2.4-2.6 4.6-2.6 3.7 0 5.7 3.5 4.3 6.9-2.1 4.7-9.7 9.3-9.7 9.3z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4.2" height="14" rx="1.4"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.4"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3.2l1.7-2.4h6.2L17 8h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="12" cy="13.2" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M3.2 11.4L20.6 3.6l-6.9 17-2.6-6.6-7.9-2.6z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+      <symbol id="i-gamepad" viewBox="0 0 24 24"><path d="M7 8h10a4.5 4.5 0 0 1 4.4 5.4l-.6 2.6a2.3 2.3 0 0 1-4.2.6L14.6 14H9.4l-1.9 2.6a2.3 2.3 0 0 1-4.2-.6l-.6-2.6A4.5 4.5 0 0 1 7 8z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8 10.8v2.4M6.8 12h2.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="15.8" cy="11.3" r="1"/><circle cx="17.6" cy="13.1" r="1"/></symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.6" ry="3.8"/><circle cx="5.6" cy="10.4" r="2"/><circle cx="9.3" cy="6.2" r="2"/><circle cx="14.7" cy="6.2" r="2"/><circle cx="18.4" cy="10.4" r="2"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2.8l1.9 5.3 5.3 1.9-5.3 1.9L12 17.2l-1.9-5.3-5.3-1.9 5.3-1.9z"/><path d="M19 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+      <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 12.5h16v7.5H4zM4 16.5c2 1.3 4 1.3 6 0s4-1.3 6 0 4 1.3 4 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8 12.5V9.5M12 12.5V9.5M16 12.5V9.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M8 7.5c0-1.6 1.3-1.6 1.3-3M12 7.5c0-1.6 1.3-1.6 1.3-3M16 7.5c0-1.6 1.3-1.6 1.3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M8 3c0 4.5 8 5.5 8 9s-8 4.5-8 9M16 3c0 4.5-8 5.5-8 9s8 4.5 8 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 17.5V5.2l10-2v12.3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="6.5" cy="17.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="16.5" cy="15.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+      <symbol id="i-sound-on" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18.3 6.5a7.6 7.6 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+      <symbol id="i-sound-off" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+      <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 13V9M9.5 2.8h5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L12 16.6 6.7 19.5l1.1-5.9-4.4-4.1 6-.8z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Corazones de fondo -->
+  <div class="flotantes" id="flotantes" aria-hidden="true"></div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <span class="eyebrow">Te quiero</span>
+      <h1 class="titulo-hero">Feliz cumpleaños, <span id="nombreHero">Heidi</span></h1>
+
+      <div class="heart-stage">
+        <canvas id="heartCanvas" aria-label="Corazón de partículas. Arrástralo para girarlo y tócalo para que lata"></canvas>
+      </div>
+      <p class="hint">Gira el corazón con el dedo · tócalo para que lata</p>
+
+      <p class="mensaje-corto">Feliz cumpleaños. Te quiero muchísimo y te extraño cada vez que estamos separados.</p>
+
+      <div class="fechas">
+        <div class="fecha-card">
+          <span class="fecha-icono-wrap"><svg class="icon"><use href="#i-calendar"/></svg></span>
+          <div class="fecha-texto">
+            <span class="fecha-label">Te escribí por primera vez</span>
+            <span class="fecha-valor">28.09.2026</span>
+          </div>
+        </div>
+        <div class="fecha-card">
+          <span class="fecha-icono-wrap"><svg class="icon"><use href="#i-sparkle"/></svg></span>
+          <div class="fecha-texto">
+            <span class="fecha-label">Nos miramos por primera vez</span>
+            <span class="fecha-valor">30.09.2026</span>
+          </div>
+        </div>
+        <div class="fecha-card destacada">
+          <span class="fecha-icono-wrap"><svg class="icon"><use href="#i-cake"/></svg></span>
+          <div class="fecha-texto">
+            <span class="fecha-label">Tu cumpleaños</span>
+            <span class="fecha-valor">25.11.2006</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contadores">
+        <div class="contador-mirada" id="chipMirada" hidden>
+          <p class="contador-titulo">Desde que nos miramos han pasado</p>
+          <p class="contador-nota">exactamente desde las 6:00 p. m. del 30.09.2026</p>
+          <div class="tiles" id="tiles" aria-live="off"></div>
+        </div>
+        <span class="chip" id="chipCumple" hidden><svg class="icon"><use href="#i-cake"/></svg><span id="proximoCumple"></span></span>
+      </div>
+    </header>
+
+    <!-- ============ VIDEOS / FEED ============ -->
+    <section class="seccion seccion-feed" id="videos" hidden>
+      <div class="titulo-seccion">
+        <h2>Videitos</h2>
+        <p>Toca uno para escucharlo con sonido</p>
+      </div>
+      <div class="feed" id="feed"></div>
+      <div class="feed-controles">
+        <button class="btn-sonido" id="btnSonido" aria-label="Activar o quitar el sonido">
+          <svg class="icon icono-on"><use href="#i-sound-on"/></svg>
+          <svg class="icon icono-off" hidden><use href="#i-sound-off"/></svg>
+          <span>Sonido</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ AUDIO ============ -->
+    <section class="seccion" id="audio">
+      <div class="titulo-seccion">
+        <h2>Un mensaje para ti</h2>
+        <p>Escúchalo cuando quieras, como una nota de voz</p>
+      </div>
+      <div class="nota-voz">
+        <audio id="audioVoz" preload="metadata" src="audio/25.m4a"></audio>
+        <button class="btn-play" id="btnPlayVoz" aria-label="Reproducir"><svg class="icon icono-play"><use href="#i-play"/></svg><svg class="icon icono-pausa" hidden><use href="#i-pause"/></svg></button>
+        <div class="onda-wrap">
+          <div class="onda" id="onda" role="slider" aria-label="Progreso del audio"></div>
+          <span class="tiempo" id="tiempoVoz">0:00 / 0:00</span>
+        </div>
+        <button class="velocidad" id="btnVelocidad" aria-label="Velocidad">1x</button>
+      </div>
+    </section>
+
+    <!-- ============ JUEGO ============ -->
+    <section class="seccion" id="juego">
+      <div class="titulo-seccion">
+        <h2>Corazón volador</h2>
+        <p>Toca para aletear y pasa entre los bastones de caramelo</p>
+      </div>
+      <div class="juego-card">
+        <div class="juego-hud">
+          <span class="hud-item"><svg class="icon"><use href="#i-star"/></svg><b id="jPuntos">0</b></span>
+          <span class="hud-item hud-record">Récord <b id="jMejor">0</b></span>
+        </div>
+        <div class="juego-wrap" id="juegoWrap">
+          <canvas id="juegoCanvas" aria-label="Juego corazón volador"></canvas>
+          <div class="juego-overlay" id="juegoOverlay">
+            <svg class="icon icono-grande"><use href="#i-gamepad"/></svg>
+            <h3 id="juegoTitulo">Corazón volador</h3>
+            <p id="juegoTexto">Toca la pantalla o pulsa espacio para aletear. Cada bastón que pasas suma un punto.</p>
+            <button class="btn" id="btnJugar">Jugar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ANIMALITOS ============ -->
+    <section class="seccion" id="mascotas">
+      <div class="titulo-seccion">
+        <h2>Animalitos</h2>
+        <p>Tócalos y mira qué hace cada uno</p>
+      </div>
+      <div class="mascotas-grid" id="mascotasGrid"></div>
+    </section>
+
+    <!-- ============ MENSAJE FINAL ============ -->
+    <section class="seccion" id="mensaje">
+      <article class="carta">
+        <h2>Para ti</h2>
+        <p>Me gusta todo de ti: tus ojitos, tu sonrisa, tus gestos, tu cabello, tu actitud, todo. Me gusta cómo eres y cómo me haces sentir cuando estás cerca.</p>
+        <p>Curiosamente, tu cumpleaños es el mismo día que el mío.</p>
+        <p>Te quiero muchísimo, y te extraño cada vez que estamos separados. Quiero seguir pasando muchos cumpleaños a tu lado.</p>
+      </article>
+    </section>
+
+    <!-- ============ TE EXTRAÑO ============ -->
+    <section class="seccion" id="extrano">
+      <div class="extrano-centro">
+        <button class="btn-extrano" id="btnExtrano" aria-expanded="false" aria-controls="panelExtrano">
+          <svg class="icon"><use href="#i-heart"/></svg> Te extraño
+        </button>
+
+        <div class="panel-extrano" id="panelExtrano" hidden>
+          <p class="panel-texto">Escribe lo que sientes o pon una foto. Me llegará al celular al instante.</p>
+          <textarea id="txtExtrano" maxlength="500" placeholder="Escribe algo bonito..."></textarea>
+
+          <div class="adjunto">
+            <label class="btn-sec" for="fotoExtrano"><svg class="icon"><use href="#i-camera"/></svg> Foto o cámara</label>
+            <input type="file" id="fotoExtrano" accept="image/*" hidden>
+            <div class="vista-previa" id="vistaPrevia" hidden>
+              <img id="imgPrevia" alt="Vista previa de la foto">
+              <button class="btn-icon pequeno" id="quitarFoto" aria-label="Quitar foto"><svg class="icon"><use href="#i-close"/></svg></button>
+            </div>
+          </div>
+
+          <button class="btn" id="btnEnviarExtrano">Enviar <svg class="icon"><use href="#i-send"/></svg></button>
+          <p class="estado" id="estadoExtrano" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pie">
+      <span class="pie-firma">Te quiero Heidi</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/sonidos.js"></script>
+  <script src="js/corazon.js"></script>
+  <script src="js/videos.js"></script>
+  <script src="js/voz.js"></script>
+  <script src="js/juego.js"></script>
+  <script src="js/mascotas.js"></script>
+  <script src="js/extrano.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
